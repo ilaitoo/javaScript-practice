@@ -1,0 +1,136 @@
+Start Global Rules * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+a {
+  text-decoration: none;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+.container .parent {
+  display: grid;
+  grid-template-rows: 400px 100px;
+}
+.container .parent .images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  user-select: none;
+}
+.container .parent .images .imgFrame {
+  width: 60%;
+  height: 100%;
+  position: relative;
+}
+.container .parent .images .arrow1,
+.container .parent .images .arrow2 {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border: solid;
+  cursor: pointer;
+}
+.container .parent .images .arrow2 {
+  right: -100px;
+  border-width: 15px 15px 15px 20px;
+  border-color: transparent transparent transparent hsl(0 0% 0% / 0.2);
+}
+.container .parent .images .arrow1 {
+  left: -100px;
+  border-width: 15px 20px 15px 15px;
+  border-color: transparent hsl(0 0% 0% / 0.2) transparent transparent;
+}
+.container .parent .images img {
+  width: 100%;
+  height: 100%;
+}
+.container .parent .images .imgFrame img:nth-of-type(1),
+.container .parent .images .imgFrame img:nth-of-type(2),
+.container .parent .images .imgFrame img:nth-of-type(3),
+.container .parent .images .imgFrame img:nth-of-type(4),
+.container .parent .images .imgFrame img:nth-of-type(5) {
+  display: none;
+}
+.container .parent .images .imgFrame img:nth-of-type(1) {
+  display: block;
+}
+.container .parent .images .imgFrame .slideof {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+}
+.container .parent .btns {
+  display: flex;
+  padding: 20px 40px;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+.container .parent .btns .btn {
+  background-color: rgb(26, 186, 170);
+  padding: 10px;
+  width: 100px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+}
+.container .parent .btns .bar {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+}
+.container .parent .btns #btn1 {
+  background-color: rgb(26 186 170 / 50%);
+}
+.container .parent .btns .bar div {
+  background-color: #ededed;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container .parent .btns .bar div:nth-child(1) {
+  background-color: rgb(26, 186, 170);
+}
